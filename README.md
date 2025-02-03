@@ -23,3 +23,6 @@ A modern weather application that provides real-time weather information and for
 - **Libraries**:
   - React Icons (weather icons)
   - React Spinners (loading animations)
+ 
+## Live preview
+https://weather-app-chi-jade-53.vercel.app
