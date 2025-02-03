@@ -57,7 +57,6 @@ function App() {
         const weatherData = await fetchWeather(lat, lon);
         const weatherForecast = await fetchForecast(lat, lon);
 
-        console.log(weatherForecast);
         setData(weatherData);
         setForecast(weatherForecast);
       } catch (err) {
@@ -86,8 +85,6 @@ function App() {
       </div>
     );
   }
-
-  // console.log(data);
 
   return (
     <div className='space-y-10'>

@@ -25,7 +25,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ data, cityName }) => {
         <div className='text-xl pt-10 '>
           <div className='flex items-center gap-2'>
             <WiWindy size={30} />
-            <p className=''>{Math.floor(data.wind.speed * 10) / 10} kmh</p>
+            <p className=''>{Math.floor(data.wind.speed * 10) / 10} m/s</p>
           </div>
           <div className='flex items-center gap-2'>
             <WiHumidity size={30} />
