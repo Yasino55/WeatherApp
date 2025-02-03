@@ -4,7 +4,7 @@ import { roundNumbers, formatDay } from "../utils/formatting";
 interface ForecastDisplayProps {
   forecast: ForecastData[];
 }
-const ForecastDisplay: React.FC<ForecastDisplayProps> = ({ forecast }) => {
+const ForecastDisplay = ({ forecast }: ForecastDisplayProps) => {
   return (
     <div className='grid grid-cols-3 gap-5 md:grid-cols-5 sm:grid-cols-4'>
       {forecast.map((day: ForecastData, i: number) => (

@@ -26,8 +26,23 @@ function App() {
       if (input.trim() !== "") {
         const data = await getCityName(input);
 
-        setSuggestions(data);
-        // console.log(data);
+        const uniqueSuggestions = new Map<string, CityData>();
+        data.forEach((city: CityData) => {
+          const key = `${city.name}-${city.country}`;
+          if (!uniqueSuggestions.has(key)) {
+            uniqueSuggestions.set(key, city);
+          } else {
+            const existingCity = uniqueSuggestions.get(key);
+            if (
+              existingCity &&
+              (!city.state || (existingCity.state && !city.state))
+            ) {
+              uniqueSuggestions.set(key, city);
+            }
+          }
+        });
+
+        setSuggestions(Array.from(uniqueSuggestions.values()));
       } else {
         setSuggestions([]);
       }
@@ -89,7 +104,7 @@ function App() {
   return (
     <div className='space-y-10'>
       <h1 className='text-2xl font-semibold'>Weather</h1>
-      <div className='flex flex-col justify-center items-center gap-10'>
+      <div className='flex flex-col items-center gap-10'>
         <SearchBar
           input={input}
           suggestions={suggestions}

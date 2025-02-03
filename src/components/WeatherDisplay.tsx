@@ -7,7 +7,7 @@ interface WeatherDisplayProps {
   cityName: string;
 }
 
-const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ data, cityName }) => {
+const WeatherDisplay = ({ data, cityName }: WeatherDisplayProps) => {
   return (
     <div className=''>
       <div className='flex justify-center mb-20 '>
