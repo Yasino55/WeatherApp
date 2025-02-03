@@ -81,8 +81,8 @@ function App() {
 
   if (!data) {
     return (
-      <div className='flex h-full justify-center items-center '>
-        <MoonLoader size={100} color='#8613d0' />;
+      <div className='flex h-svh justify-center items-center '>
+        <MoonLoader size={100} color='#474747' />;
       </div>
     );
   }

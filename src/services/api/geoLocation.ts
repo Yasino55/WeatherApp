@@ -29,7 +29,7 @@ export const getCityName = async (city: string) => {
   };
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${OPEN_WEATHER_API_KEY}`,
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${OPEN_WEATHER_API_KEY}`,
       options
     );
 
