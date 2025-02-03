@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { CityData } from "../utils/types";
 
